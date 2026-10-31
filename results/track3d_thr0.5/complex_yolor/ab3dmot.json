@@ -1,0 +1,90 @@
+{
+ "tracker": "ab3dmot",
+ "detections": "complex_yolor",
+ "camera_fov_filter": true,
+ "meta": {
+  "task": "complex",
+  "version": "yolor",
+  "weights": "/home/minsoogo/Physical_AI/release_bundle/complex/yolor/complex_yolor_kitti5k_e010.pth",
+  "conf": 0.1,
+  "boundary": {
+   "minX": 0,
+   "maxX": 50,
+   "minY": -25,
+   "maxY": 25,
+   "minZ": -2.73,
+   "maxZ": 1.27
+  },
+  "classes": [
+   "Car",
+   "Pedestrian",
+   "Cyclist"
+  ],
+  "source": "KITTI tracking velodyne",
+  "split": "KITTI-MOTS val sequences",
+  "date": "2026-10-31 10:14:47"
+ },
+ "det_thr": 0.5,
+ "similarity": {
+  "primary": "BEV IoU",
+  "secondary": "3D IoU"
+ },
+ "bev": {
+  "per_class": {
+   "Car": {
+    "HOTA": 0.5023718599759595,
+    "DetA": 0.46067660291081564,
+    "AssA": 0.554379466069444,
+    "MOTA": 0.40747201628143626,
+    "IDF1": 0.6099870298313879,
+    "IDSW": 142
+   },
+   "Pedestrian": {
+    "HOTA": 0.17131497939789553,
+    "DetA": 0.1411137289870076,
+    "AssA": 0.22140044822915866,
+    "MOTA": -2.0290245362058648,
+    "IDF1": 0.15461672473867596,
+    "IDSW": 195
+   }
+  },
+  "mean": {
+   "HOTA": 0.3368434196869275,
+   "DetA": 0.30089516594891164,
+   "AssA": 0.3878899571493013,
+   "MOTA": -0.8107762599622143,
+   "IDF1": 0.3823018772850319,
+   "IDSW": 337
+  }
+ },
+ "3d": {
+  "per_class": {
+   "Car": {
+    "HOTA": 0.4098322531660255,
+    "DetA": 0.35871784159236464,
+    "AssA": 0.480526112198302,
+    "MOTA": 0.07820904201192033,
+    "IDF1": 0.5088197146562905,
+    "IDSW": 65
+   },
+   "Pedestrian": {
+    "HOTA": 0.1479473578388393,
+    "DetA": 0.11705452113872943,
+    "AssA": 0.2041403402183544,
+    "MOTA": -2.526630760023938,
+    "IDF1": 0.09625435540069686,
+    "IDSW": 106
+   }
+  },
+  "mean": {
+   "HOTA": 0.2788898055024324,
+   "DetA": 0.23788618136554704,
+   "AssA": 0.3423332262083282,
+   "MOTA": -1.2242108590060088,
+   "IDF1": 0.30253703502849366,
+   "IDSW": 171
+  }
+ },
+ "tracker_ms": 0.8179149881470948,
+ "detector_ms": 59.5051383972168
+}

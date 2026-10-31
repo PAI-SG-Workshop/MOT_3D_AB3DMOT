@@ -1,0 +1,90 @@
+{
+ "tracker": "ab3dmot",
+ "detections": "complex_v2",
+ "camera_fov_filter": true,
+ "meta": {
+  "task": "complex",
+  "version": "v2",
+  "weights": "/home/minsoogo/Physical_AI/release_bundle/complex/v2/complex_v2_kitti5k_e010.pth",
+  "conf": 0.1,
+  "boundary": {
+   "minX": 0,
+   "maxX": 50,
+   "minY": -25,
+   "maxY": 25,
+   "minZ": -2.73,
+   "maxZ": 1.27
+  },
+  "classes": [
+   "Car",
+   "Pedestrian",
+   "Cyclist"
+  ],
+  "source": "KITTI tracking velodyne",
+  "split": "KITTI-MOTS val sequences",
+  "date": "2026-10-31 10:00:59"
+ },
+ "det_thr": 0.9,
+ "similarity": {
+  "primary": "BEV IoU",
+  "secondary": "3D IoU"
+ },
+ "bev": {
+  "per_class": {
+   "Car": {
+    "HOTA": 0.4178903515250756,
+    "DetA": 0.3895896411047972,
+    "AssA": 0.45753740698665035,
+    "MOTA": 0.5053060037796191,
+    "IDF1": 0.6054590570719603,
+    "IDSW": 46
+   },
+   "Pedestrian": {
+    "HOTA": 0.02577397720096557,
+    "DetA": 0.0110523144154178,
+    "AssA": 0.06409314381478676,
+    "MOTA": -0.04338719329742669,
+    "IDF1": 0.008522727272727272,
+    "IDSW": 1
+   }
+  },
+  "mean": {
+   "HOTA": 0.22183216436302058,
+   "DetA": 0.20032097776010752,
+   "AssA": 0.2608152754007186,
+   "MOTA": 0.2309594052410962,
+   "IDF1": 0.3069908921723438,
+   "IDSW": 47
+  }
+ },
+ "3d": {
+  "per_class": {
+   "Car": {
+    "HOTA": 0.3544465750287897,
+    "DetA": 0.3232967154266781,
+    "AssA": 0.3994521890756063,
+    "MOTA": 0.346416630324175,
+    "IDF1": 0.5247679441227828,
+    "IDSW": 31
+   },
+   "Pedestrian": {
+    "HOTA": 0.02331986790493203,
+    "DetA": 0.010102667858611076,
+    "AssA": 0.05670794622785441,
+    "MOTA": -0.04608019150209455,
+    "IDF1": 0.006818181818181818,
+    "IDSW": 0
+   }
+  },
+  "mean": {
+   "HOTA": 0.18888322146686085,
+   "DetA": 0.1666996916426446,
+   "AssA": 0.22808006765173036,
+   "MOTA": 0.15016821941104025,
+   "IDF1": 0.26579306297048233,
+   "IDSW": 31
+  }
+ },
+ "tracker_ms": 0.015247991541400552,
+ "detector_ms": 33.878047943115234
+}

@@ -1,0 +1,90 @@
+{
+ "tracker": "ab3dmot",
+ "detections": "yolo3d_yolor",
+ "camera_fov_filter": true,
+ "meta": {
+  "task": "yolo3d",
+  "version": "yolor",
+  "weights": "/home/minsoogo/Physical_AI/release_bundle/yolo3d/yolor/yolo3d_yolor_kitti5k_e010.pth",
+  "conf": 0.1,
+  "boundary": {
+   "minX": 0,
+   "maxX": 50,
+   "minY": -25,
+   "maxY": 25,
+   "minZ": -2.73,
+   "maxZ": 1.27
+  },
+  "classes": [
+   "Car",
+   "Pedestrian",
+   "Cyclist"
+  ],
+  "source": "KITTI tracking velodyne",
+  "split": "KITTI-MOTS val sequences",
+  "date": "2026-10-31 09:47:28"
+ },
+ "det_thr": 0.5,
+ "similarity": {
+  "primary": "BEV IoU",
+  "secondary": "3D IoU"
+ },
+ "bev": {
+  "per_class": {
+   "Car": {
+    "HOTA": 0.3390868399521293,
+    "DetA": 0.24740752154688922,
+    "AssA": 0.4792546436750232,
+    "MOTA": -0.7445849687454572,
+    "IDF1": 0.356840686160569,
+    "IDSW": 308
+   },
+   "Pedestrian": {
+    "HOTA": 0.17697923948003524,
+    "DetA": 0.15799400042200035,
+    "AssA": 0.22499690668043523,
+    "MOTA": -1.4317773788150807,
+    "IDF1": 0.16209386281588448,
+    "IDSW": 215
+   }
+  },
+  "mean": {
+   "HOTA": 0.25803303971608227,
+   "DetA": 0.20270076098444478,
+   "AssA": 0.3521257751777292,
+   "MOTA": -1.088181173780269,
+   "IDF1": 0.25946727448822676,
+   "IDSW": 523
+  }
+ },
+ "3d": {
+  "per_class": {
+   "Car": {
+    "HOTA": 0.2874166164515782,
+    "DetA": 0.2012465889198851,
+    "AssA": 0.42820197825731654,
+    "MOTA": -1.050443378398023,
+    "IDF1": 0.29445400027892704,
+    "IDSW": 148
+   },
+   "Pedestrian": {
+    "HOTA": 0.15917361416849113,
+    "DetA": 0.13435729942670718,
+    "AssA": 0.2302341165921092,
+    "MOTA": -1.8806104129263914,
+    "IDF1": 0.09494584837545127,
+    "IDSW": 91
+   }
+  },
+  "mean": {
+   "HOTA": 0.22329511531003465,
+   "DetA": 0.16780194417329614,
+   "AssA": 0.3292180474247129,
+   "MOTA": -1.4655268956622072,
+   "IDF1": 0.19469992432718916,
+   "IDSW": 239
+  }
+ },
+ "tracker_ms": 1.313537999521941,
+ "detector_ms": 39.038185119628906
+}

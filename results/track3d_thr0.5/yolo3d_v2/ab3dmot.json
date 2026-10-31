@@ -1,0 +1,90 @@
+{
+ "tracker": "ab3dmot",
+ "detections": "yolo3d_v2",
+ "camera_fov_filter": true,
+ "meta": {
+  "task": "yolo3d",
+  "version": "v2",
+  "weights": "/home/minsoogo/Physical_AI/release_bundle/yolo3d/v2/yolo3d_v2_kitti5k_e010.pth",
+  "conf": 0.1,
+  "boundary": {
+   "minX": 0,
+   "maxX": 50,
+   "minY": -25,
+   "maxY": 25,
+   "minZ": -2.73,
+   "maxZ": 1.27
+  },
+  "classes": [
+   "Car",
+   "Pedestrian",
+   "Cyclist"
+  ],
+  "source": "KITTI tracking velodyne",
+  "split": "KITTI-MOTS val sequences",
+  "date": "2026-10-31 09:35:27"
+ },
+ "det_thr": 0.5,
+ "similarity": {
+  "primary": "BEV IoU",
+  "secondary": "3D IoU"
+ },
+ "bev": {
+  "per_class": {
+   "Car": {
+    "HOTA": 0.3237067352668128,
+    "DetA": 0.33384778263604387,
+    "AssA": 0.31994713370813505,
+    "MOTA": 0.12080244221543829,
+    "IDF1": 0.3720079522862823,
+    "IDSW": 85
+   },
+   "Pedestrian": {
+    "HOTA": 0.010141160498821944,
+    "DetA": 0.0030422941258333694,
+    "AssA": 0.03478902378382227,
+    "MOTA": -0.006582884500299222,
+    "IDF1": 0.0041444641799881585,
+    "IDSW": 0
+   }
+  },
+  "mean": {
+   "HOTA": 0.1669239478828174,
+   "DetA": 0.1684450383809386,
+   "AssA": 0.17736807874597865,
+   "MOTA": 0.057109778857569536,
+   "IDF1": 0.18807620823313523,
+   "IDSW": 85
+  }
+ },
+ "3d": {
+  "per_class": {
+   "Car": {
+    "HOTA": 0.27400724004780225,
+    "DetA": 0.2719430549060576,
+    "AssA": 0.28580604099995366,
+    "MOTA": -0.25803169065271114,
+    "IDF1": 0.2393638170974155,
+    "IDSW": 45
+   },
+   "Pedestrian": {
+    "HOTA": 0.00938318952566243,
+    "DetA": 0.002712921247075151,
+    "AssA": 0.0333820297819189,
+    "MOTA": -0.008976660682226212,
+    "IDF1": 0.0017761989342806395,
+    "IDSW": 0
+   }
+  },
+  "mean": {
+   "HOTA": 0.14169521478673233,
+   "DetA": 0.13732798807656638,
+   "AssA": 0.15959403539093628,
+   "MOTA": -0.13350417566746867,
+   "IDF1": 0.12057000801584807,
+   "IDSW": 45
+  }
+ },
+ "tracker_ms": 0.016018995665945113,
+ "detector_ms": 46.833744049072266
+}

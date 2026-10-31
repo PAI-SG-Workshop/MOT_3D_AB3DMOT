@@ -1,0 +1,90 @@
+{
+ "tracker": "ab3dmot",
+ "detections": "complex_retinanet",
+ "camera_fov_filter": true,
+ "meta": {
+  "task": "complex",
+  "version": "retinanet",
+  "weights": "/home/minsoogo/Physical_AI/release_bundle/complex/retinanet/complex_retinanet_kitti5k_e010.pth",
+  "conf": 0.1,
+  "boundary": {
+   "minX": 0,
+   "maxX": 50,
+   "minY": -25,
+   "maxY": 25,
+   "minZ": -2.73,
+   "maxZ": 1.27
+  },
+  "classes": [
+   "Car",
+   "Pedestrian",
+   "Cyclist"
+  ],
+  "source": "KITTI tracking velodyne",
+  "split": "KITTI-MOTS val sequences",
+  "date": "2026-10-31 10:20:18"
+ },
+ "det_thr": 0.7,
+ "similarity": {
+  "primary": "BEV IoU",
+  "secondary": "3D IoU"
+ },
+ "bev": {
+  "per_class": {
+   "Car": {
+    "HOTA": 0.5099672017064053,
+    "DetA": 0.4681126174240481,
+    "AssA": 0.562388877454411,
+    "MOTA": 0.5191161506032853,
+    "IDF1": 0.6931282903851482,
+    "IDSW": 110
+   },
+   "Pedestrian": {
+    "HOTA": 0.17795820402685283,
+    "DetA": 0.17204743595913222,
+    "AssA": 0.18951032674497315,
+    "MOTA": -1.312986235786954,
+    "IDF1": 0.1600729261622607,
+    "IDSW": 242
+   }
+  },
+  "mean": {
+   "HOTA": 0.34396270286662906,
+   "DetA": 0.32008002669159014,
+   "AssA": 0.3759496020996921,
+   "MOTA": -0.3969350425918343,
+   "IDF1": 0.4266006082737045,
+   "IDSW": 352
+  }
+ },
+ "3d": {
+  "per_class": {
+   "Car": {
+    "HOTA": 0.4183631547528489,
+    "DetA": 0.3654815289296753,
+    "AssA": 0.49144744105338295,
+    "MOTA": 0.13301351940689055,
+    "IDF1": 0.5604045441950679,
+    "IDSW": 50
+   },
+   "Pedestrian": {
+    "HOTA": 0.15250754414140824,
+    "DetA": 0.14208381594152023,
+    "AssA": 0.16952730651530537,
+    "MOTA": -1.758228605625374,
+    "IDF1": 0.09480401093892434,
+    "IDSW": 152
+   }
+  },
+  "mean": {
+   "HOTA": 0.28543534944712856,
+   "DetA": 0.25378267243559777,
+   "AssA": 0.3304873737843442,
+   "MOTA": -0.8126075431092417,
+   "IDF1": 0.3276042775669961,
+   "IDSW": 202
+  }
+ },
+ "tracker_ms": 0.4936240002280101,
+ "detector_ms": 48.21505355834961
+}

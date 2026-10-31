@@ -1,0 +1,90 @@
+{
+ "tracker": "ab3dmot",
+ "detections": "yolo3d_efficientdet",
+ "camera_fov_filter": true,
+ "meta": {
+  "task": "yolo3d",
+  "version": "efficientdet",
+  "weights": "/home/minsoogo/Physical_AI/release_bundle/yolo3d/efficientdet/yolo3d_efficientdet_kitti5k_e010.pth",
+  "conf": 0.1,
+  "boundary": {
+   "minX": 0,
+   "maxX": 50,
+   "minY": -25,
+   "maxY": 25,
+   "minZ": -2.73,
+   "maxZ": 1.27
+  },
+  "classes": [
+   "Car",
+   "Pedestrian",
+   "Cyclist"
+  ],
+  "source": "KITTI tracking velodyne",
+  "split": "KITTI-MOTS val sequences",
+  "date": "2026-10-31 09:49:09"
+ },
+ "det_thr": 0.9,
+ "similarity": {
+  "primary": "BEV IoU",
+  "secondary": "3D IoU"
+ },
+ "bev": {
+  "per_class": {
+   "Car": {
+    "HOTA": 0.46108038551014047,
+    "DetA": 0.4003515286458129,
+    "AssA": 0.5443167354807412,
+    "MOTA": 0.2948102921936328,
+    "IDF1": 0.567693294834777,
+    "IDSW": 73
+   },
+   "Pedestrian": {
+    "HOTA": 0.1462256348187748,
+    "DetA": 0.1504758330619698,
+    "AssA": 0.15658288400517034,
+    "MOTA": -0.47695990424895274,
+    "IDF1": 0.1331666145670522,
+    "IDSW": 118
+   }
+  },
+  "mean": {
+   "HOTA": 0.3036530101644576,
+   "DetA": 0.27541368085389134,
+   "AssA": 0.3504498097429558,
+   "MOTA": -0.09107480602765997,
+   "IDF1": 0.35042995470091465,
+   "IDSW": 191
+  }
+ },
+ "3d": {
+  "per_class": {
+   "Car": {
+    "HOTA": 0.3855540032959653,
+    "DetA": 0.323361844090035,
+    "AssA": 0.4757966724938371,
+    "MOTA": 0.051897078063672046,
+    "IDF1": 0.4647096567212063,
+    "IDSW": 30
+   },
+   "Pedestrian": {
+    "HOTA": 0.132065819129394,
+    "DetA": 0.12889431177445504,
+    "AssA": 0.1567422258916866,
+    "MOTA": -0.7025733093955715,
+    "IDF1": 0.08471397311659894,
+    "IDSW": 40
+   }
+  },
+  "mean": {
+   "HOTA": 0.25880991121267966,
+   "DetA": 0.22612807793224501,
+   "AssA": 0.31626944919276184,
+   "MOTA": -0.3253381156659497,
+   "IDF1": 0.2747118149189026,
+   "IDSW": 70
+  }
+ },
+ "tracker_ms": 0.05715200677514076,
+ "detector_ms": 31.153432846069336
+}

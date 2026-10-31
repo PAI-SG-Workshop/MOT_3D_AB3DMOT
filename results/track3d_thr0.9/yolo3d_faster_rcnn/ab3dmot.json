@@ -1,0 +1,90 @@
+{
+ "tracker": "ab3dmot",
+ "detections": "yolo3d_faster_rcnn",
+ "camera_fov_filter": true,
+ "meta": {
+  "task": "yolo3d",
+  "version": "faster_rcnn",
+  "weights": "/home/minsoogo/Physical_AI/release_bundle/yolo3d/faster_rcnn/yolo3d_faster_rcnn_kitti5k_e010.pth",
+  "conf": 0.1,
+  "boundary": {
+   "minX": 0,
+   "maxX": 50,
+   "minY": -25,
+   "maxY": 25,
+   "minZ": -2.73,
+   "maxZ": 1.27
+  },
+  "classes": [
+   "Car",
+   "Pedestrian",
+   "Cyclist"
+  ],
+  "source": "KITTI tracking velodyne",
+  "split": "KITTI-MOTS val sequences",
+  "date": "2026-10-31 09:53:18"
+ },
+ "det_thr": 0.9,
+ "similarity": {
+  "primary": "BEV IoU",
+  "secondary": "3D IoU"
+ },
+ "bev": {
+  "per_class": {
+   "Car": {
+    "HOTA": 0.6295255796897306,
+    "DetA": 0.6200150765714384,
+    "AssA": 0.6440180654018409,
+    "MOTA": 0.7239424334932403,
+    "IDF1": 0.7722480620155039,
+    "IDSW": 49
+   },
+   "Pedestrian": {
+    "HOTA": 0.2992559361199671,
+    "DetA": 0.26952291737990974,
+    "AssA": 0.3488025569485586,
+    "MOTA": 0.34799521244763615,
+    "IDF1": 0.451063829787234,
+    "IDSW": 48
+   }
+  },
+  "mean": {
+   "HOTA": 0.46439075790484885,
+   "DetA": 0.44476899697567407,
+   "AssA": 0.49641031117519974,
+   "MOTA": 0.5359688229704382,
+   "IDF1": 0.611655945901369,
+   "IDSW": 97
+  }
+ },
+ "3d": {
+  "per_class": {
+   "Car": {
+    "HOTA": 0.5360102039919982,
+    "DetA": 0.5223658269861797,
+    "AssA": 0.5562950106741148,
+    "MOTA": 0.6546009594417793,
+    "IDF1": 0.7395348837209302,
+    "IDSW": 44
+   },
+   "Pedestrian": {
+    "HOTA": 0.23917265442013735,
+    "DetA": 0.2025207151237691,
+    "AssA": 0.3058405963045046,
+    "MOTA": -0.03231597845601436,
+    "IDF1": 0.27152988855116517,
+    "IDSW": 19
+   }
+  },
+  "mean": {
+   "HOTA": 0.38759142920606776,
+   "DetA": 0.3624432710549744,
+   "AssA": 0.43106780348930973,
+   "MOTA": 0.31114249049288245,
+   "IDF1": 0.5055323861360477,
+   "IDSW": 63
+  }
+ },
+ "tracker_ms": 0.024963999749161303,
+ "detector_ms": 44.963558197021484
+}

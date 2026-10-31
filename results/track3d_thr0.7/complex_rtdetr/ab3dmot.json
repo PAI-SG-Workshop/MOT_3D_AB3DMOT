@@ -1,0 +1,90 @@
+{
+ "tracker": "ab3dmot",
+ "detections": "complex_rtdetr",
+ "camera_fov_filter": true,
+ "meta": {
+  "task": "complex",
+  "version": "rtdetr",
+  "weights": "/home/minsoogo/Physical_AI/release_bundle/complex/rtdetr/complex_rtdetr_kitti5k_e010.pth",
+  "conf": 0.1,
+  "boundary": {
+   "minX": 0,
+   "maxX": 50,
+   "minY": -25,
+   "maxY": 25,
+   "minZ": -2.73,
+   "maxZ": 1.27
+  },
+  "classes": [
+   "Car",
+   "Pedestrian",
+   "Cyclist"
+  ],
+  "source": "KITTI tracking velodyne",
+  "split": "KITTI-MOTS val sequences",
+  "date": "2026-10-31 10:28:24"
+ },
+ "det_thr": 0.7,
+ "similarity": {
+  "primary": "BEV IoU",
+  "secondary": "3D IoU"
+ },
+ "bev": {
+  "per_class": {
+   "Car": {
+    "HOTA": 0.5640646932342088,
+    "DetA": 0.5129933880462454,
+    "AssA": 0.6247517734146494,
+    "MOTA": 0.5980520424480302,
+    "IDF1": 0.6854367185391742,
+    "IDSW": 26
+   },
+   "Pedestrian": {
+    "HOTA": 0.134049816962458,
+    "DetA": 0.06584747413045411,
+    "AssA": 0.29402864049119815,
+    "MOTA": 0.056253740275284264,
+    "IDF1": 0.1302475780409042,
+    "IDSW": 18
+   }
+  },
+  "mean": {
+   "HOTA": 0.3490572550983334,
+   "DetA": 0.28942043108834975,
+   "AssA": 0.45939020695292376,
+   "MOTA": 0.32715289136165726,
+   "IDF1": 0.4078421482900392,
+   "IDSW": 44
+  }
+ },
+ "3d": {
+  "per_class": {
+   "Car": {
+    "HOTA": 0.4703701725628082,
+    "DetA": 0.4193180279481406,
+    "AssA": 0.5352471514256266,
+    "MOTA": 0.5185346707370257,
+    "IDF1": 0.6451380768192858,
+    "IDSW": 23
+   },
+   "Pedestrian": {
+    "HOTA": 0.11987372713684215,
+    "DetA": 0.05589514822121755,
+    "AssA": 0.28521018333121684,
+    "MOTA": 0.011370436864153202,
+    "IDF1": 0.10118406889128095,
+    "IDSW": 10
+   }
+  },
+  "mean": {
+   "HOTA": 0.2951219498498252,
+   "DetA": 0.23760658808467908,
+   "AssA": 0.41022866737842173,
+   "MOTA": 0.26495255380058946,
+   "IDF1": 0.3731610728552834,
+   "IDSW": 33
+  }
+ },
+ "tracker_ms": 0.014666991773992777,
+ "detector_ms": 40.89591979980469
+}

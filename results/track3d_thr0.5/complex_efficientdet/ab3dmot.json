@@ -1,0 +1,90 @@
+{
+ "tracker": "ab3dmot",
+ "detections": "complex_efficientdet",
+ "camera_fov_filter": true,
+ "meta": {
+  "task": "complex",
+  "version": "efficientdet",
+  "weights": "/home/minsoogo/Physical_AI/release_bundle/complex/efficientdet/complex_efficientdet_kitti5k_e010.pth",
+  "conf": 0.1,
+  "boundary": {
+   "minX": 0,
+   "maxX": 50,
+   "minY": -25,
+   "maxY": 25,
+   "minZ": -2.73,
+   "maxZ": 1.27
+  },
+  "classes": [
+   "Car",
+   "Pedestrian",
+   "Cyclist"
+  ],
+  "source": "KITTI tracking velodyne",
+  "split": "KITTI-MOTS val sequences",
+  "date": "2026-10-31 10:17:42"
+ },
+ "det_thr": 0.5,
+ "similarity": {
+  "primary": "BEV IoU",
+  "secondary": "3D IoU"
+ },
+ "bev": {
+  "per_class": {
+   "Car": {
+    "HOTA": 0.5041120180612747,
+    "DetA": 0.48128852760637947,
+    "AssA": 0.536839518034373,
+    "MOTA": 0.45195522605029803,
+    "IDF1": 0.6240217321001229,
+    "IDSW": 147
+   },
+   "Pedestrian": {
+    "HOTA": 0.1416319232532327,
+    "DetA": 0.14121774065500836,
+    "AssA": 0.14968819517076284,
+    "MOTA": -1.9446439257929384,
+    "IDF1": 0.10880458124552612,
+    "IDSW": 246
+   }
+  },
+  "mean": {
+   "HOTA": 0.3228719706572537,
+   "DetA": 0.3112531341306939,
+   "AssA": 0.3432638566025679,
+   "MOTA": -0.7463443498713203,
+   "IDF1": 0.36641315667282454,
+   "IDSW": 393
+  }
+ },
+ "3d": {
+  "per_class": {
+   "Car": {
+    "HOTA": 0.412586628188179,
+    "DetA": 0.37162159208818285,
+    "AssA": 0.47406061170983466,
+    "MOTA": 0.06294519552260502,
+    "IDF1": 0.5055300433348425,
+    "IDSW": 79
+   },
+   "Pedestrian": {
+    "HOTA": 0.12429140119446436,
+    "DetA": 0.11819638268561447,
+    "AssA": 0.13906913140481245,
+    "MOTA": -2.3126870137642133,
+    "IDF1": 0.06712797263978366,
+    "IDSW": 164
+   }
+  },
+  "mean": {
+   "HOTA": 0.2684390146913217,
+   "DetA": 0.24490898738689865,
+   "AssA": 0.30656487155732354,
+   "MOTA": -1.124870909120804,
+   "IDF1": 0.2863290079873131,
+   "IDSW": 243
+  }
+ },
+ "tracker_ms": 0.6003369926474988,
+ "detector_ms": 56.3149299621582
+}

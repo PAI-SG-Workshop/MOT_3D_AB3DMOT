@@ -1,0 +1,90 @@
+{
+ "tracker": "ab3dmot",
+ "detections": "complex_faster_rcnn",
+ "camera_fov_filter": true,
+ "meta": {
+  "task": "complex",
+  "version": "faster_rcnn",
+  "weights": "/home/minsoogo/Physical_AI/release_bundle/complex/faster_rcnn/complex_faster_rcnn_kitti5k_e010.pth",
+  "conf": 0.1,
+  "boundary": {
+   "minX": 0,
+   "maxX": 50,
+   "minY": -25,
+   "maxY": 25,
+   "minZ": -2.73,
+   "maxZ": 1.27
+  },
+  "classes": [
+   "Car",
+   "Pedestrian",
+   "Cyclist"
+  ],
+  "source": "KITTI tracking velodyne",
+  "split": "KITTI-MOTS val sequences",
+  "date": "2026-10-31 10:22:38"
+ },
+ "det_thr": 0.9,
+ "similarity": {
+  "primary": "BEV IoU",
+  "secondary": "3D IoU"
+ },
+ "bev": {
+  "per_class": {
+   "Car": {
+    "HOTA": 0.6571725972339693,
+    "DetA": 0.6436143003887045,
+    "AssA": 0.6767822504330906,
+    "MOTA": 0.7538886466056113,
+    "IDF1": 0.8034386617100372,
+    "IDSW": 39
+   },
+   "Pedestrian": {
+    "HOTA": 0.3429420054671625,
+    "DetA": 0.30754743043360405,
+    "AssA": 0.4102792315570855,
+    "MOTA": 0.37283064033512864,
+    "IDF1": 0.5342646781196904,
+    "IDSW": 29
+   }
+  },
+  "mean": {
+   "HOTA": 0.5000573013505659,
+   "DetA": 0.4755808654111543,
+   "AssA": 0.543530740995088,
+   "MOTA": 0.5633596434703699,
+   "IDF1": 0.6688516699148638,
+   "IDSW": 68
+  }
+ },
+ "3d": {
+  "per_class": {
+   "Car": {
+    "HOTA": 0.5266604161883872,
+    "DetA": 0.4899929275339612,
+    "AssA": 0.5801283632660585,
+    "MOTA": 0.4731792411687745,
+    "IDF1": 0.6765799256505576,
+    "IDSW": 28
+   },
+   "Pedestrian": {
+    "HOTA": 0.2870755175650244,
+    "DetA": 0.24580203972073203,
+    "AssA": 0.3765964366905113,
+    "MOTA": -0.007480550568521843,
+    "IDF1": 0.3386822729847083,
+    "IDSW": 16
+   }
+  },
+  "mean": {
+   "HOTA": 0.4068679668767058,
+   "DetA": 0.3678974836273466,
+   "AssA": 0.4783623999782849,
+   "MOTA": 0.23284934530012635,
+   "IDF1": 0.507631099317633,
+   "IDSW": 44
+  }
+ },
+ "tracker_ms": 0.2964489976875484,
+ "detector_ms": 46.51630783081055
+}

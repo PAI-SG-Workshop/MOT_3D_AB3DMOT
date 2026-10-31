@@ -1,0 +1,90 @@
+{
+ "tracker": "ab3dmot",
+ "detections": "yolo3d_faster_rcnn",
+ "camera_fov_filter": true,
+ "meta": {
+  "task": "yolo3d",
+  "version": "faster_rcnn",
+  "weights": "/home/minsoogo/Physical_AI/release_bundle/yolo3d/faster_rcnn/yolo3d_faster_rcnn_kitti5k_e010.pth",
+  "conf": 0.1,
+  "boundary": {
+   "minX": 0,
+   "maxX": 50,
+   "minY": -25,
+   "maxY": 25,
+   "minZ": -2.73,
+   "maxZ": 1.27
+  },
+  "classes": [
+   "Car",
+   "Pedestrian",
+   "Cyclist"
+  ],
+  "source": "KITTI tracking velodyne",
+  "split": "KITTI-MOTS val sequences",
+  "date": "2026-10-31 09:53:18"
+ },
+ "det_thr": 0.7,
+ "similarity": {
+  "primary": "BEV IoU",
+  "secondary": "3D IoU"
+ },
+ "bev": {
+  "per_class": {
+   "Car": {
+    "HOTA": 0.6494129023328217,
+    "DetA": 0.6273616569521728,
+    "AssA": 0.6774463525408434,
+    "MOTA": 0.7280127925570578,
+    "IDF1": 0.8018439923898727,
+    "IDSW": 45
+   },
+   "Pedestrian": {
+    "HOTA": 0.4332340015770391,
+    "DetA": 0.38234493675956344,
+    "AssA": 0.5103447533677236,
+    "MOTA": 0.40484739676840215,
+    "IDF1": 0.6442560654779305,
+    "IDSW": 25
+   }
+  },
+  "mean": {
+   "HOTA": 0.5413234519549304,
+   "DetA": 0.5048532968558681,
+   "AssA": 0.5938955529542835,
+   "MOTA": 0.56643009466273,
+   "IDF1": 0.7230500289339016,
+   "IDSW": 70
+  }
+ },
+ "3d": {
+  "per_class": {
+   "Car": {
+    "HOTA": 0.5505932275491694,
+    "DetA": 0.5278798951475863,
+    "AssA": 0.5802853002955563,
+    "MOTA": 0.6511120802442215,
+    "IDF1": 0.7686228596516903,
+    "IDSW": 34
+   },
+   "Pedestrian": {
+    "HOTA": 0.33890983057876506,
+    "DetA": 0.2848434051039839,
+    "AssA": 0.4245631293932374,
+    "MOTA": -0.3081986834230999,
+    "IDF1": 0.34317451037708274,
+    "IDSW": 16
+   }
+  },
+  "mean": {
+   "HOTA": 0.4447515290639672,
+   "DetA": 0.40636165012578507,
+   "AssA": 0.5024242148443968,
+   "MOTA": 0.1714566984105608,
+   "IDF1": 0.5558986850143866,
+   "IDSW": 50
+  }
+ },
+ "tracker_ms": 0.39828500302974135,
+ "detector_ms": 44.963558197021484
+}

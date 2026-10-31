@@ -1,0 +1,90 @@
+{
+ "tracker": "ab3dmot",
+ "detections": "complex_retinanet",
+ "camera_fov_filter": true,
+ "meta": {
+  "task": "complex",
+  "version": "retinanet",
+  "weights": "/home/minsoogo/Physical_AI/release_bundle/complex/retinanet/complex_retinanet_kitti5k_e010.pth",
+  "conf": 0.1,
+  "boundary": {
+   "minX": 0,
+   "maxX": 50,
+   "minY": -25,
+   "maxY": 25,
+   "minZ": -2.73,
+   "maxZ": 1.27
+  },
+  "classes": [
+   "Car",
+   "Pedestrian",
+   "Cyclist"
+  ],
+  "source": "KITTI tracking velodyne",
+  "split": "KITTI-MOTS val sequences",
+  "date": "2026-10-31 10:20:18"
+ },
+ "det_thr": 0.5,
+ "similarity": {
+  "primary": "BEV IoU",
+  "secondary": "3D IoU"
+ },
+ "bev": {
+  "per_class": {
+   "Car": {
+    "HOTA": 0.45484816853095644,
+    "DetA": 0.40204709109518494,
+    "AssA": 0.5211340180469606,
+    "MOTA": 0.29597325192615204,
+    "IDF1": 0.5991389913899139,
+    "IDSW": 187
+   },
+   "Pedestrian": {
+    "HOTA": 0.14676863799622017,
+    "DetA": 0.13318493618870464,
+    "AssA": 0.16734813940576837,
+    "MOTA": -2.2423698384201076,
+    "IDF1": 0.11130630314103014,
+    "IDSW": 333
+   }
+  },
+  "mean": {
+   "HOTA": 0.3008084032635883,
+   "DetA": 0.26761601364194476,
+   "AssA": 0.34424107872636445,
+   "MOTA": -0.9731982932469778,
+   "IDF1": 0.35522264726547204,
+   "IDSW": 520
+  }
+ },
+ "3d": {
+  "per_class": {
+   "Car": {
+    "HOTA": 0.3747237874563596,
+    "DetA": 0.3144723566407199,
+    "AssA": 0.4596397995988801,
+    "MOTA": -0.1266172408780346,
+    "IDF1": 0.4779827798277983,
+    "IDSW": 104
+   },
+   "Pedestrian": {
+    "HOTA": 0.12747138815244435,
+    "DetA": 0.11012220327168505,
+    "AssA": 0.15501184916871277,
+    "MOTA": -2.7112507480550567,
+    "IDF1": 0.071393436863186,
+    "IDSW": 196
+   }
+  },
+  "mean": {
+   "HOTA": 0.25109758780440194,
+   "DetA": 0.21229727995620246,
+   "AssA": 0.30732582438379646,
+   "MOTA": -1.4189339944665456,
+   "IDF1": 0.2746881083454922,
+   "IDSW": 300
+  }
+ },
+ "tracker_ms": 0.8654330158606172,
+ "detector_ms": 48.21505355834961
+}

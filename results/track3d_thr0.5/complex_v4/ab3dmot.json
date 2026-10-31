@@ -1,0 +1,90 @@
+{
+ "tracker": "ab3dmot",
+ "detections": "complex_v4",
+ "camera_fov_filter": true,
+ "meta": {
+  "task": "complex",
+  "version": "v4",
+  "weights": "/home/minsoogo/Physical_AI/release_bundle/complex/v4/complex_v4_kitti5k_e010.pth",
+  "conf": 0.1,
+  "boundary": {
+   "minX": 0,
+   "maxX": 50,
+   "minY": -25,
+   "maxY": 25,
+   "minZ": -2.73,
+   "maxZ": 1.27
+  },
+  "classes": [
+   "Car",
+   "Pedestrian",
+   "Cyclist"
+  ],
+  "source": "KITTI tracking velodyne",
+  "split": "KITTI-MOTS val sequences",
+  "date": "2026-10-31 10:05:43"
+ },
+ "det_thr": 0.5,
+ "similarity": {
+  "primary": "BEV IoU",
+  "secondary": "3D IoU"
+ },
+ "bev": {
+  "per_class": {
+   "Car": {
+    "HOTA": 0.37873683032845884,
+    "DetA": 0.31337563537345803,
+    "AssA": 0.46421430311170403,
+    "MOTA": -0.2341910161360663,
+    "IDF1": 0.43370683973026414,
+    "IDSW": 197
+   },
+   "Pedestrian": {
+    "HOTA": 0.13962623670905294,
+    "DetA": 0.09893251668951253,
+    "AssA": 0.20901903581215708,
+    "MOTA": -3.414721723518851,
+    "IDF1": 0.10189944134078212,
+    "IDSW": 170
+   }
+  },
+  "mean": {
+   "HOTA": 0.2591815335187559,
+   "DetA": 0.20615407603148528,
+   "AssA": 0.3366166694619306,
+   "MOTA": -1.8244563698274587,
+   "IDF1": 0.2678031405355231,
+   "IDSW": 367
+  }
+ },
+ "3d": {
+  "per_class": {
+   "Car": {
+    "HOTA": 0.3137993540759121,
+    "DetA": 0.2452361435996431,
+    "AssA": 0.41399100784093334,
+    "MOTA": -0.6309056548916994,
+    "IDF1": 0.35643664756882826,
+    "IDSW": 124
+   },
+   "Pedestrian": {
+    "HOTA": 0.11880115962873174,
+    "DetA": 0.08203443164151715,
+    "AssA": 0.18707582053691948,
+    "MOTA": -3.963494913225613,
+    "IDF1": 0.05016759776536313,
+    "IDSW": 70
+   }
+  },
+  "mean": {
+   "HOTA": 0.2163002568523219,
+   "DetA": 0.16363528762058013,
+   "AssA": 0.30053341418892643,
+   "MOTA": -2.2972002840586563,
+   "IDF1": 0.20330212266709569,
+   "IDSW": 194
+  }
+ },
+ "tracker_ms": 1.7917840013979003,
+ "detector_ms": 46.25897216796875
+}

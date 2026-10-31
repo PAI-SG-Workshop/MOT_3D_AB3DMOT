@@ -1,0 +1,90 @@
+{
+ "tracker": "ab3dmot",
+ "detections": "complex_efficientdet",
+ "camera_fov_filter": true,
+ "meta": {
+  "task": "complex",
+  "version": "efficientdet",
+  "weights": "/home/minsoogo/Physical_AI/release_bundle/complex/efficientdet/complex_efficientdet_kitti5k_e010.pth",
+  "conf": 0.1,
+  "boundary": {
+   "minX": 0,
+   "maxX": 50,
+   "minY": -25,
+   "maxY": 25,
+   "minZ": -2.73,
+   "maxZ": 1.27
+  },
+  "classes": [
+   "Car",
+   "Pedestrian",
+   "Cyclist"
+  ],
+  "source": "KITTI tracking velodyne",
+  "split": "KITTI-MOTS val sequences",
+  "date": "2026-10-31 10:17:42"
+ },
+ "det_thr": 0.9,
+ "similarity": {
+  "primary": "BEV IoU",
+  "secondary": "3D IoU"
+ },
+ "bev": {
+  "per_class": {
+   "Car": {
+    "HOTA": 0.5749150908672475,
+    "DetA": 0.5609879655012506,
+    "AssA": 0.5973782167130948,
+    "MOTA": 0.6916703009158308,
+    "IDF1": 0.7506450856204551,
+    "IDSW": 42
+   },
+   "Pedestrian": {
+    "HOTA": 0.1629902471294908,
+    "DetA": 0.19539141693889284,
+    "AssA": 0.14571782927054738,
+    "MOTA": -0.4054458408138839,
+    "IDF1": 0.14681840038467703,
+    "IDSW": 124
+   }
+  },
+  "mean": {
+   "HOTA": 0.36895266899836915,
+   "DetA": 0.37818969122007173,
+   "AssA": 0.3715480229918211,
+   "MOTA": 0.14311223005097345,
+   "IDF1": 0.448731743002566,
+   "IDSW": 166
+  }
+ },
+ "3d": {
+  "per_class": {
+   "Car": {
+    "HOTA": 0.47204865306878124,
+    "DetA": 0.43776088085742554,
+    "AssA": 0.5226582809078968,
+    "MOTA": 0.3975868585550225,
+    "IDF1": 0.6195949644225506,
+    "IDSW": 21
+   },
+   "Pedestrian": {
+    "HOTA": 0.1450562469072695,
+    "DetA": 0.16830907252965732,
+    "AssA": 0.13783084595684147,
+    "MOTA": -0.6002393776181927,
+    "IDF1": 0.0907196666132393,
+    "IDSW": 77
+   }
+  },
+  "mean": {
+   "HOTA": 0.3085524499880254,
+   "DetA": 0.3030349766935414,
+   "AssA": 0.33024456343236913,
+   "MOTA": -0.10132625953158508,
+   "IDF1": 0.3551573155178949,
+   "IDSW": 98
+  }
+ },
+ "tracker_ms": 0.04675598756875843,
+ "detector_ms": 56.3149299621582
+}

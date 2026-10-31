@@ -1,0 +1,90 @@
+{
+ "tracker": "ab3dmot",
+ "detections": "yolo3d_retinanet",
+ "camera_fov_filter": true,
+ "meta": {
+  "task": "yolo3d",
+  "version": "retinanet",
+  "weights": "/home/minsoogo/Physical_AI/release_bundle/yolo3d/retinanet/yolo3d_retinanet_kitti5k_e010.pth",
+  "conf": 0.1,
+  "boundary": {
+   "minX": 0,
+   "maxX": 50,
+   "minY": -25,
+   "maxY": 25,
+   "minZ": -2.73,
+   "maxZ": 1.27
+  },
+  "classes": [
+   "Car",
+   "Pedestrian",
+   "Cyclist"
+  ],
+  "source": "KITTI tracking velodyne",
+  "split": "KITTI-MOTS val sequences",
+  "date": "2026-10-31 09:51:02"
+ },
+ "det_thr": 0.5,
+ "similarity": {
+  "primary": "BEV IoU",
+  "secondary": "3D IoU"
+ },
+ "bev": {
+  "per_class": {
+   "Car": {
+    "HOTA": 0.2919809462076608,
+    "DetA": 0.2808792420637996,
+    "AssA": 0.3122548099618143,
+    "MOTA": -0.31981392644279694,
+    "IDF1": 0.3101966990730274,
+    "IDSW": 377
+   },
+   "Pedestrian": {
+    "HOTA": 0.15383048199015145,
+    "DetA": 0.12180012987240617,
+    "AssA": 0.20378775232920399,
+    "MOTA": -2.2588270496708556,
+    "IDF1": 0.11075212262378842,
+    "IDSW": 212
+   }
+  },
+  "mean": {
+   "HOTA": 0.22290571409890614,
+   "DetA": 0.2013396859681029,
+   "AssA": 0.25802128114550915,
+   "MOTA": -1.2893204880568263,
+   "IDF1": 0.2104744108484079,
+   "IDSW": 589
+  }
+ },
+ "3d": {
+  "per_class": {
+   "Car": {
+    "HOTA": 0.2524682300536593,
+    "DetA": 0.23433466783316956,
+    "AssA": 0.2837774143259938,
+    "MOTA": -0.6243640063962785,
+    "IDF1": 0.2528826588288492,
+    "IDSW": 248
+   },
+   "Pedestrian": {
+    "HOTA": 0.13084877500514622,
+    "DetA": 0.10097784787069175,
+    "AssA": 0.17791876434146445,
+    "MOTA": -2.666367444643926,
+    "IDF1": 0.058306409196784134,
+    "IDSW": 98
+   }
+  },
+  "mean": {
+   "HOTA": 0.19165850252940275,
+   "DetA": 0.16765625785193067,
+   "AssA": 0.23084808933372913,
+   "MOTA": -1.6453657255201022,
+   "IDF1": 0.15559453401281667,
+   "IDSW": 346
+  }
+ },
+ "tracker_ms": 0.8950220071710646,
+ "detector_ms": 34.72338104248047
+}

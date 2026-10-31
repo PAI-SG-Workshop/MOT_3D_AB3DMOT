@@ -1,0 +1,90 @@
+{
+ "tracker": "ab3dmot",
+ "detections": "complex_deformable_detr",
+ "camera_fov_filter": true,
+ "meta": {
+  "task": "complex",
+  "version": "deformable_detr",
+  "weights": "/home/minsoogo/Physical_AI/release_bundle/complex/deformable_detr/complex_deformable_detr_kitti5k_e010.pth",
+  "conf": 0.1,
+  "boundary": {
+   "minX": 0,
+   "maxX": 50,
+   "minY": -25,
+   "maxY": 25,
+   "minZ": -2.73,
+   "maxZ": 1.27
+  },
+  "classes": [
+   "Car",
+   "Pedestrian",
+   "Cyclist"
+  ],
+  "source": "KITTI tracking velodyne",
+  "split": "KITTI-MOTS val sequences",
+  "date": "2026-10-31 10:26:22"
+ },
+ "det_thr": 0.7,
+ "similarity": {
+  "primary": "BEV IoU",
+  "secondary": "3D IoU"
+ },
+ "bev": {
+  "per_class": {
+   "Car": {
+    "HOTA": 0.31793598297816095,
+    "DetA": 0.3330584792346795,
+    "AssA": 0.3066111881611988,
+    "MOTA": 0.36604157581043756,
+    "IDF1": 0.3901585340745316,
+    "IDSW": 75
+   },
+   "Pedestrian": {
+    "HOTA": 0.0014972779625543361,
+    "DetA": 0.0003307143668695753,
+    "AssA": 0.006778786709404065,
+    "MOTA": 0.0005984440454817474,
+    "IDF1": 0.0011961722488038277,
+    "IDSW": 0
+   }
+  },
+  "mean": {
+   "HOTA": 0.15971663047035764,
+   "DetA": 0.16669459680077456,
+   "AssA": 0.15669498743530144,
+   "MOTA": 0.18332000992795966,
+   "IDF1": 0.1956773531616677,
+   "IDSW": 75
+  }
+ },
+ "3d": {
+  "per_class": {
+   "Car": {
+    "HOTA": 0.27407802988912205,
+    "DetA": 0.27879724012183654,
+    "AssA": 0.27526556536297325,
+    "MOTA": 0.3289722343363861,
+    "IDF1": 0.37842289479102326,
+    "IDSW": 68
+   },
+   "Pedestrian": {
+    "HOTA": 0.0014261965112004123,
+    "DetA": 0.00031497055025355125,
+    "AssA": 0.006457862447529868,
+    "MOTA": 0.0005984440454817474,
+    "IDF1": 0.0011961722488038277,
+    "IDSW": 0
+   }
+  },
+  "mean": {
+   "HOTA": 0.13775211320016123,
+   "DetA": 0.13955610533604504,
+   "AssA": 0.14086171390525157,
+   "MOTA": 0.16478533919093394,
+   "IDF1": 0.18980953351991353,
+   "IDSW": 68
+  }
+ },
+ "tracker_ms": 0.012874996173195541,
+ "detector_ms": 75.08883666992188
+}

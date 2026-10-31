@@ -1,0 +1,90 @@
+{
+ "tracker": "ab3dmot",
+ "detections": "yolo3d_faster_rcnn",
+ "camera_fov_filter": true,
+ "meta": {
+  "task": "yolo3d",
+  "version": "faster_rcnn",
+  "weights": "/home/minsoogo/Physical_AI/release_bundle/yolo3d/faster_rcnn/yolo3d_faster_rcnn_kitti5k_e010.pth",
+  "conf": 0.1,
+  "boundary": {
+   "minX": 0,
+   "maxX": 50,
+   "minY": -25,
+   "maxY": 25,
+   "minZ": -2.73,
+   "maxZ": 1.27
+  },
+  "classes": [
+   "Car",
+   "Pedestrian",
+   "Cyclist"
+  ],
+  "source": "KITTI tracking velodyne",
+  "split": "KITTI-MOTS val sequences",
+  "date": "2026-10-31 09:53:18"
+ },
+ "det_thr": 0.5,
+ "similarity": {
+  "primary": "BEV IoU",
+  "secondary": "3D IoU"
+ },
+ "bev": {
+  "per_class": {
+   "Car": {
+    "HOTA": 0.6540102518295487,
+    "DetA": 0.6158389668218919,
+    "AssA": 0.6998456208922657,
+    "MOTA": 0.699229539177206,
+    "IDF1": 0.8095372859770765,
+    "IDSW": 43
+   },
+   "Pedestrian": {
+    "HOTA": 0.40555611011493264,
+    "DetA": 0.33848756670021957,
+    "AssA": 0.5040967632954727,
+    "MOTA": 0.16337522441651706,
+    "IDF1": 0.574468085106383,
+    "IDSW": 26
+   }
+  },
+  "mean": {
+   "HOTA": 0.5297831809722406,
+   "DetA": 0.4771632667610557,
+   "AssA": 0.6019711920938692,
+   "MOTA": 0.43130238179686153,
+   "IDF1": 0.6920026855417298,
+   "IDSW": 69
+  }
+ },
+ "3d": {
+  "per_class": {
+   "Car": {
+    "HOTA": 0.5534993280401845,
+    "DetA": 0.5176293367008513,
+    "AssA": 0.5976127786406169,
+    "MOTA": 0.6149149585695596,
+    "IDF1": 0.7743030989104287,
+    "IDSW": 31
+   },
+   "Pedestrian": {
+    "HOTA": 0.31640150271990175,
+    "DetA": 0.2532902308774756,
+    "AssA": 0.4142069866822764,
+    "MOTA": -0.6050269299820467,
+    "IDF1": 0.30034636318654134,
+    "IDSW": 18
+   }
+  },
+  "mean": {
+   "HOTA": 0.43495041538004314,
+   "DetA": 0.38545978378916346,
+   "AssA": 0.5059098826614467,
+   "MOTA": 0.00494401429375646,
+   "IDF1": 0.537324731048485,
+   "IDSW": 49
+  }
+ },
+ "tracker_ms": 0.4257140099070966,
+ "detector_ms": 44.963558197021484
+}

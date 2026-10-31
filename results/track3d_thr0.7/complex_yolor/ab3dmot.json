@@ -1,0 +1,90 @@
+{
+ "tracker": "ab3dmot",
+ "detections": "complex_yolor",
+ "camera_fov_filter": true,
+ "meta": {
+  "task": "complex",
+  "version": "yolor",
+  "weights": "/home/minsoogo/Physical_AI/release_bundle/complex/yolor/complex_yolor_kitti5k_e010.pth",
+  "conf": 0.1,
+  "boundary": {
+   "minX": 0,
+   "maxX": 50,
+   "minY": -25,
+   "maxY": 25,
+   "minZ": -2.73,
+   "maxZ": 1.27
+  },
+  "classes": [
+   "Car",
+   "Pedestrian",
+   "Cyclist"
+  ],
+  "source": "KITTI tracking velodyne",
+  "split": "KITTI-MOTS val sequences",
+  "date": "2026-10-31 10:14:47"
+ },
+ "det_thr": 0.7,
+ "similarity": {
+  "primary": "BEV IoU",
+  "secondary": "3D IoU"
+ },
+ "bev": {
+  "per_class": {
+   "Car": {
+    "HOTA": 0.5551167585746345,
+    "DetA": 0.5315685797247207,
+    "AssA": 0.5860465368388512,
+    "MOTA": 0.6069196104084896,
+    "IDF1": 0.6997533014076331,
+    "IDSW": 108
+   },
+   "Pedestrian": {
+    "HOTA": 0.19404660018556844,
+    "DetA": 0.17992166429587067,
+    "AssA": 0.22382779949039014,
+    "MOTA": -1.2573309395571515,
+    "IDF1": 0.19463629025024665,
+    "IDSW": 173
+   }
+  },
+  "mean": {
+   "HOTA": 0.37458167938010145,
+   "DetA": 0.3557451220102957,
+   "AssA": 0.40493716816462066,
+   "MOTA": -0.3252056645743309,
+   "IDF1": 0.4471947958289399,
+   "IDSW": 281
+  }
+ },
+ "3d": {
+  "per_class": {
+   "Car": {
+    "HOTA": 0.4512588533981714,
+    "DetA": 0.4138264411860995,
+    "AssA": 0.503858685998413,
+    "MOTA": 0.30120657072248874,
+    "IDF1": 0.5848207807284864,
+    "IDSW": 43
+   },
+   "Pedestrian": {
+    "HOTA": 0.1673183998342686,
+    "DetA": 0.14950822575898762,
+    "AssA": 0.20463910068141047,
+    "MOTA": -1.7339916217833633,
+    "IDF1": 0.12270158758633061,
+    "IDSW": 90
+   }
+  },
+  "mean": {
+   "HOTA": 0.30928862661622003,
+   "DetA": 0.2816673334725436,
+   "AssA": 0.3542488933399117,
+   "MOTA": -0.7163925255304373,
+   "IDF1": 0.35376118415740854,
+   "IDSW": 133
+  }
+ },
+ "tracker_ms": 0.4912779986625537,
+ "detector_ms": 59.5051383972168
+}

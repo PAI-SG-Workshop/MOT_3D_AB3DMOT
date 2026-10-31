@@ -1,0 +1,90 @@
+{
+ "tracker": "ab3dmot",
+ "detections": "yolo3d_v2",
+ "camera_fov_filter": true,
+ "meta": {
+  "task": "yolo3d",
+  "version": "v2",
+  "weights": "/home/minsoogo/Physical_AI/release_bundle/yolo3d/v2/yolo3d_v2_kitti5k_e010.pth",
+  "conf": 0.1,
+  "boundary": {
+   "minX": 0,
+   "maxX": 50,
+   "minY": -25,
+   "maxY": 25,
+   "minZ": -2.73,
+   "maxZ": 1.27
+  },
+  "classes": [
+   "Car",
+   "Pedestrian",
+   "Cyclist"
+  ],
+  "source": "KITTI tracking velodyne",
+  "split": "KITTI-MOTS val sequences",
+  "date": "2026-10-31 09:35:27"
+ },
+ "det_thr": 0.7,
+ "similarity": {
+  "primary": "BEV IoU",
+  "secondary": "3D IoU"
+ },
+ "bev": {
+  "per_class": {
+   "Car": {
+    "HOTA": 0.28631221995965617,
+    "DetA": 0.2878465095214126,
+    "AssA": 0.290048391821227,
+    "MOTA": 0.1792411687745312,
+    "IDF1": 0.3521023765996344,
+    "IDSW": 68
+   },
+   "Pedestrian": {
+    "HOTA": 0.0012786832972397505,
+    "DetA": 0.0001889823301521308,
+    "AssA": 0.008651766402307137,
+    "MOTA": 0.0002992220227408737,
+    "IDF1": 0.0005982650314089142,
+    "IDSW": 0
+   }
+  },
+  "mean": {
+   "HOTA": 0.14379545162844795,
+   "DetA": 0.14401774592578237,
+   "AssA": 0.14935007911176706,
+   "MOTA": 0.08977019539863604,
+   "IDF1": 0.17635032081552166,
+   "IDSW": 68
+  }
+ },
+ "3d": {
+  "per_class": {
+   "Car": {
+    "HOTA": 0.24631935126250054,
+    "DetA": 0.2385791459123359,
+    "AssA": 0.26183716792755635,
+    "MOTA": -0.10844599505742114,
+    "IDF1": 0.23638025594149908,
+    "IDSW": 33
+   },
+   "Pedestrian": {
+    "HOTA": 0.0011721263558031048,
+    "DetA": 0.00017323380263945318,
+    "AssA": 0.007930785868781542,
+    "MOTA": 0.0002992220227408737,
+    "IDF1": 0.0005982650314089142,
+    "IDSW": 0
+   }
+  },
+  "mean": {
+   "HOTA": 0.12374573880915182,
+   "DetA": 0.11937618985748767,
+   "AssA": 0.13488397689816894,
+   "MOTA": -0.05407338651734013,
+   "IDF1": 0.118489260486454,
+   "IDSW": 33
+  }
+ },
+ "tracker_ms": 0.014435005141422153,
+ "detector_ms": 46.833744049072266
+}

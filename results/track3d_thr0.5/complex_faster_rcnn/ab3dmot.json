@@ -1,0 +1,90 @@
+{
+ "tracker": "ab3dmot",
+ "detections": "complex_faster_rcnn",
+ "camera_fov_filter": true,
+ "meta": {
+  "task": "complex",
+  "version": "faster_rcnn",
+  "weights": "/home/minsoogo/Physical_AI/release_bundle/complex/faster_rcnn/complex_faster_rcnn_kitti5k_e010.pth",
+  "conf": 0.1,
+  "boundary": {
+   "minX": 0,
+   "maxX": 50,
+   "minY": -25,
+   "maxY": 25,
+   "minZ": -2.73,
+   "maxZ": 1.27
+  },
+  "classes": [
+   "Car",
+   "Pedestrian",
+   "Cyclist"
+  ],
+  "source": "KITTI tracking velodyne",
+  "split": "KITTI-MOTS val sequences",
+  "date": "2026-10-31 10:22:38"
+ },
+ "det_thr": 0.5,
+ "similarity": {
+  "primary": "BEV IoU",
+  "secondary": "3D IoU"
+ },
+ "bev": {
+  "per_class": {
+   "Car": {
+    "HOTA": 0.664069259480497,
+    "DetA": 0.6373968776404485,
+    "AssA": 0.6978738060651761,
+    "MOTA": 0.7306294519552261,
+    "IDF1": 0.8076427651352511,
+    "IDSW": 33
+   },
+   "Pedestrian": {
+    "HOTA": 0.3906212560800532,
+    "DetA": 0.31514104401286924,
+    "AssA": 0.5126103656505149,
+    "MOTA": -0.028126870137642132,
+    "IDF1": 0.5351194786386676,
+    "IDSW": 36
+   }
+  },
+  "mean": {
+   "HOTA": 0.5273452577802751,
+   "DetA": 0.47626896082665887,
+   "AssA": 0.6052420858578456,
+   "MOTA": 0.351251290908792,
+   "IDF1": 0.6713811218869594,
+   "IDSW": 69
+  }
+ },
+ "3d": {
+  "per_class": {
+   "Car": {
+    "HOTA": 0.5268662444576817,
+    "DetA": 0.480915603564791,
+    "AssA": 0.5914498256291068,
+    "MOTA": 0.40151184765227504,
+    "IDF1": 0.665092314297982,
+    "IDSW": 19
+   },
+   "Pedestrian": {
+    "HOTA": 0.32685581462141444,
+    "DetA": 0.25604704547403745,
+    "AssA": 0.4518832526414706,
+    "MOTA": -0.6558946738479952,
+    "IDF1": 0.3149891383055757,
+    "IDSW": 22
+   }
+  },
+  "mean": {
+   "HOTA": 0.4268610295395481,
+   "DetA": 0.36848132451941423,
+   "AssA": 0.5216665391352887,
+   "MOTA": -0.12719141309786006,
+   "IDF1": 0.49004072630177886,
+   "IDSW": 41
+  }
+ },
+ "tracker_ms": 0.4385089850984514,
+ "detector_ms": 46.51630783081055
+}

@@ -1,0 +1,90 @@
+{
+ "tracker": "ab3dmot",
+ "detections": "yolo3d_yolor",
+ "camera_fov_filter": true,
+ "meta": {
+  "task": "yolo3d",
+  "version": "yolor",
+  "weights": "/home/minsoogo/Physical_AI/release_bundle/yolo3d/yolor/yolo3d_yolor_kitti5k_e010.pth",
+  "conf": 0.1,
+  "boundary": {
+   "minX": 0,
+   "maxX": 50,
+   "minY": -25,
+   "maxY": 25,
+   "minZ": -2.73,
+   "maxZ": 1.27
+  },
+  "classes": [
+   "Car",
+   "Pedestrian",
+   "Cyclist"
+  ],
+  "source": "KITTI tracking velodyne",
+  "split": "KITTI-MOTS val sequences",
+  "date": "2026-10-31 09:47:28"
+ },
+ "det_thr": 0.9,
+ "similarity": {
+  "primary": "BEV IoU",
+  "secondary": "3D IoU"
+ },
+ "bev": {
+  "per_class": {
+   "Car": {
+    "HOTA": 0.45829596659704563,
+    "DetA": 0.3995233496180749,
+    "AssA": 0.5408545860161089,
+    "MOTA": 0.2459659834278238,
+    "IDF1": 0.551440329218107,
+    "IDSW": 148
+   },
+   "Pedestrian": {
+    "HOTA": 0.19297984988223602,
+    "DetA": 0.1748908175013416,
+    "AssA": 0.23558676397815925,
+    "MOTA": -0.06552962298025135,
+    "IDF1": 0.21933451466824178,
+    "IDSW": 74
+   }
+  },
+  "mean": {
+   "HOTA": 0.32563790823964084,
+   "DetA": 0.28720708355970825,
+   "AssA": 0.3882206749971341,
+   "MOTA": 0.09021818022378622,
+   "IDF1": 0.38538742194317444,
+   "IDSW": 222
+  }
+ },
+ "3d": {
+  "per_class": {
+   "Car": {
+    "HOTA": 0.3882875321780842,
+    "DetA": 0.3285220654797924,
+    "AssA": 0.47683859196529543,
+    "MOTA": 0.0453554295682512,
+    "IDF1": 0.4668911335578002,
+    "IDSW": 70
+   },
+   "Pedestrian": {
+    "HOTA": 0.17524855938097844,
+    "DetA": 0.15430283430962524,
+    "AssA": 0.22805298304572297,
+    "MOTA": -0.28515858767205265,
+    "IDF1": 0.12482772199251821,
+    "IDSW": 26
+   }
+  },
+  "mean": {
+   "HOTA": 0.2817680457795313,
+   "DetA": 0.24141244989470884,
+   "AssA": 0.3524457875055092,
+   "MOTA": -0.11990157905190073,
+   "IDF1": 0.2958594277751592,
+   "IDSW": 96
+  }
+ },
+ "tracker_ms": 0.03474800905678421,
+ "detector_ms": 39.038185119628906
+}

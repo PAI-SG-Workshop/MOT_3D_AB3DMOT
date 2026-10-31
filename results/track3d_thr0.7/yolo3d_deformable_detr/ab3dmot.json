@@ -1,0 +1,90 @@
+{
+ "tracker": "ab3dmot",
+ "detections": "yolo3d_deformable_detr",
+ "camera_fov_filter": true,
+ "meta": {
+  "task": "yolo3d",
+  "version": "deformable_detr",
+  "weights": "/home/minsoogo/Physical_AI/release_bundle/yolo3d/deformable_detr/yolo3d_deformable_detr_kitti5k_e010.pth",
+  "conf": 0.1,
+  "boundary": {
+   "minX": 0,
+   "maxX": 50,
+   "minY": -25,
+   "maxY": 25,
+   "minZ": -2.73,
+   "maxZ": 1.27
+  },
+  "classes": [
+   "Car",
+   "Pedestrian",
+   "Cyclist"
+  ],
+  "source": "KITTI tracking velodyne",
+  "split": "KITTI-MOTS val sequences",
+  "date": "2026-10-31 09:57:08"
+ },
+ "det_thr": 0.7,
+ "similarity": {
+  "primary": "BEV IoU",
+  "secondary": "3D IoU"
+ },
+ "bev": {
+  "per_class": {
+   "Car": {
+    "HOTA": 0.25148176808209355,
+    "DetA": 0.27969655965356083,
+    "AssA": 0.22739505060026555,
+    "MOTA": 0.30963802878325336,
+    "IDF1": 0.3204061791077023,
+    "IDSW": 106
+   },
+   "Pedestrian": {
+    "HOTA": 0.007638131399553479,
+    "DetA": 0.0006771301663729027,
+    "AssA": 0.08617162564530986,
+    "MOTA": 0.0008976660682226212,
+    "IDF1": 0.0017937219730941704,
+    "IDSW": 0
+   }
+  },
+  "mean": {
+   "HOTA": 0.12955994974082352,
+   "DetA": 0.14018684490996686,
+   "AssA": 0.15678333812278772,
+   "MOTA": 0.155267847425738,
+   "IDF1": 0.16109995054039825,
+   "IDSW": 106
+  }
+ },
+ "3d": {
+  "per_class": {
+   "Car": {
+    "HOTA": 0.22702562233076276,
+    "DetA": 0.24743385416504005,
+    "AssA": 0.211730075525815,
+    "MOTA": 0.29335659252798374,
+    "IDF1": 0.31522091390299234,
+    "IDSW": 102
+   },
+   "Pedestrian": {
+    "HOTA": 0.006745206895769368,
+    "DetA": 0.0005983875259919932,
+    "AssA": 0.07604481288691815,
+    "MOTA": 0.0008976660682226212,
+    "IDF1": 0.0017937219730941704,
+    "IDSW": 0
+   }
+  },
+  "mean": {
+   "HOTA": 0.11688541461326607,
+   "DetA": 0.12401612084551603,
+   "AssA": 0.14388744420636657,
+   "MOTA": 0.14712712929810318,
+   "IDF1": 0.15850731793804326,
+   "IDSW": 102
+  }
+ },
+ "tracker_ms": 0.01251199864782393,
+ "detector_ms": 76.69922637939453
+}
